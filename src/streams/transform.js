@@ -5,7 +5,7 @@ import { stdin, stdout } from 'node:process';
 const transform = async () => {
   const transformer = new Transform({
     transform(chunk, enc, cb) {
-      cb(null, chunk.toString().split('').reverse().join(''));
+      cb(null, chunk.toString().split('').reverse().join('') + '\n');
     },
   });
 
